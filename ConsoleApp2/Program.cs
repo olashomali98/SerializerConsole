@@ -44,10 +44,29 @@ namespace ConsoleApp2
                 {
 
                     String[] array = (string[])(myField.GetValue(obj) as Array);
+                    
+
+
+
+                  for(int j=0; j< array.Length; j++)
+                    {
+
+                        array[j] = "\"" + array[j] + "\"";
+
+                        if (j == 0) {
+
+                            array[j] = "[" + array[j];
+                                
+                          
+                        }
+
+                        else if ( j== array.Length - 1)
+                        {
+                            array[j] = array[array.Length - 1] +  "]";
+                        }
+
+                    }
                     String arrayValues = string.Join(",", array);
-
-                  
-
                     info.Add(arrayValues);
 
                 }
@@ -65,9 +84,15 @@ namespace ConsoleApp2
 
             for (int i = 0; i < info.Count; i = i + 2)
             {
+                if (i == info.Count - 2)
+                {
+                    json += "\"" + info[i] + "\":" + info[i + 1] + "\"";
+                }
 
-                json += "\"" + info[i] + "\":" + info[i + 1] + "\",";
-
+                else
+                {
+                    json += "\"" + info[i] + "\":" + info[i + 1] + "\",";
+                }
                
 
             }
