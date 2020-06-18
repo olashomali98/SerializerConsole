@@ -36,13 +36,12 @@ namespace ConsoleApp2
                 var fieldName = myField.Name;
                 var fieldType = myField.FieldType.Name;
 
-                object obj1 = myField.GetType();
 
-                if (obj1.Equals("String[]"))
+                if (fieldType.Equals("String[]"))
                 {
 
-                    var array = myField.GetValue(obj) as Array;
-                  var arrayValues=  string.Join("", array);
+                    String[] array = (string[])(myField.GetValue(obj) as Array);
+                  String arrayValues=  string.Join(",", array);
                     info.Add(arrayValues);
 
 
