@@ -44,8 +44,6 @@ namespace ConsoleApp2
                   String arrayValues=  string.Join(",", array);
                     info.Add(arrayValues);
 
-
-
                 }
 
                 else
@@ -56,17 +54,28 @@ namespace ConsoleApp2
                    }
 
 
-
                 info.Add(fieldName);
-                info.Add(fieldType);
+             //   info.Add(fieldType);
                
             }
 
+            var json = "";
+
+            for (int i = 0; i < info.Count; i = i + 2)
+            {
+
+                json += "{\"" + info[i] + "\":" + info[i + 1] + "\",";
+
+               
+
+            }
+            Console.WriteLine(json);
             for (int i = 0; i < info.Count; i++)
             {
                 Console.WriteLine(info[i]);
                 
             }
+
 
         
         }
