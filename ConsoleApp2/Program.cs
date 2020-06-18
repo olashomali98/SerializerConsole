@@ -10,10 +10,12 @@ namespace ConsoleApp2
 {
     class Program
     {
+       
+
         static void Main(string[] args)
         {
 
-            Configuration obj = new Configuration(55, "Ola", new[] { "53", "52" });
+            Configuration obj = new Configuration(55, "www.training.com", new[] { "192.168.1.8", "192.168.1.2" });
 
             Call(obj);
 
@@ -42,21 +44,20 @@ namespace ConsoleApp2
                 {
 
                     String[] array = (string[])(myField.GetValue(obj) as Array);
-                  String arrayValues=  string.Join(",", array);
+                    String arrayValues = string.Join(",", array);
+
+                  
+
                     info.Add(arrayValues);
 
                 }
 
                 else
-                   {
-                       var values = myField.GetValue(obj).ToString();
+                {
+                    var values = myField.GetValue(obj).ToString();
                     info.Add(values);
 
                 }
-
-
-               
-               
 
             }
 
