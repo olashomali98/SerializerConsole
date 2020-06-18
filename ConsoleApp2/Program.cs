@@ -21,26 +21,6 @@ namespace ConsoleApp2
         }
 
 
-
-        //static string ConvertStringArrayToString(string[] array)
-        //{
-        //    // Concatenate all the elements into a StringBuilder.
-        //    StringBuilder builder = new StringBuilder();
-        //    foreach (string value in array)
-        //    {
-        //        builder.Append(value);
-        //        builder.Append('.');
-        //    }
-        //    return builder.ToString();
-        //}
-
-        //static string ConvertStringArrayToStringJoin(string[] array)
-        //{
-        //    // Use string Join to concatenate the string elements.
-        //    string result = string.Join(".", array);
-        //    return result;
-        //}
-
         private static void Call(object obj)
         {
             List<string> info = new List<string>();
@@ -53,30 +33,34 @@ namespace ConsoleApp2
             foreach (FieldInfo myField in fields)
             {
 
-        object obj1 = myField.GetValue(obj);
+                var fieldName = myField.Name;
+                var fieldType = myField.FieldType.Name;
 
-                if (obj1 == "String[]")
+                object obj1 = myField.GetType();
+
+                if (obj1.Equals("String[]"))
                 {
 
-                    string[] s = (string[])obj1;
+                    var array = myField.GetValue(obj) as Array;
+                  var arrayValues=  string.Join("", array);
+                    info.Add(arrayValues);
 
-                  //  string result1 = ConvertStringArrayToString(s);
-                  //  string result2 = ConvertStringArrayToStringJoin(s);
 
 
-               }
+                }
 
-                      else
+                else
                    {
-                        var values = myField.GetValue(obj).ToString();
+                       var values = myField.GetValue(obj).ToString();
 
                         info.Add(values);
                    }
 
-    
 
-                info.Add(myField.Name);
-                info.Add(myField.FieldType.Name);
+
+                info.Add(fieldName);
+                info.Add(fieldType);
+               
             }
 
             for (int i = 0; i < info.Count; i++)
