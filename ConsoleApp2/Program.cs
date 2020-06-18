@@ -36,6 +36,7 @@ namespace ConsoleApp2
                 var fieldName = myField.Name;
                 var fieldType = myField.FieldType.Name;
 
+                info.Add(fieldName);
 
                 if (fieldType.Equals("String[]"))
                 {
@@ -49,26 +50,28 @@ namespace ConsoleApp2
                 else
                    {
                        var values = myField.GetValue(obj).ToString();
+                    info.Add(values);
 
-                        info.Add(values);
-                   }
+                }
 
 
-                info.Add(fieldName);
-             //   info.Add(fieldType);
                
+               
+
             }
 
-            var json = "";
+            var json = "{";
 
             for (int i = 0; i < info.Count; i = i + 2)
             {
 
-                json += "{\"" + info[i] + "\":" + info[i + 1] + "\",";
+                json += "\"" + info[i] + "\":" + info[i + 1] + "\",";
 
                
 
             }
+            json += "}";
+
             Console.WriteLine(json);
             for (int i = 0; i < info.Count; i++)
             {
