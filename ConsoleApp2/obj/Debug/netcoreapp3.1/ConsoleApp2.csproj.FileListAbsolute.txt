@@ -17,3 +17,10 @@ C:\Users\Lenovo\source\repos\ConsoleApp2\SerializerConsole\ConsoleApp2\obj\Debug
 C:\Users\Lenovo\source\repos\ConsoleApp2\SerializerConsole\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\source\repos\ConsoleApp2\SerializerConsole\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.dll
 C:\Users\Lenovo\source\repos\ConsoleApp2\SerializerConsole\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.pdb
+C:\Users\Lenovo\source\repos\ConsoleApp2\SerializerConsole\ConsoleApp2\bin\Debug\netcoreapp3.1\ConsoleApp2.exe
+C:\Users\Lenovo\source\repos\ConsoleApp2\SerializerConsole\ConsoleApp2\bin\Debug\netcoreapp3.1\ConsoleApp2.deps.json
+C:\Users\Lenovo\source\repos\ConsoleApp2\SerializerConsole\ConsoleApp2\bin\Debug\netcoreapp3.1\ConsoleApp2.runtimeconfig.json
+C:\Users\Lenovo\source\repos\ConsoleApp2\SerializerConsole\ConsoleApp2\bin\Debug\netcoreapp3.1\ConsoleApp2.runtimeconfig.dev.json
+C:\Users\Lenovo\source\repos\ConsoleApp2\SerializerConsole\ConsoleApp2\bin\Debug\netcoreapp3.1\ConsoleApp2.dll
+C:\Users\Lenovo\source\repos\ConsoleApp2\SerializerConsole\ConsoleApp2\bin\Debug\netcoreapp3.1\ConsoleApp2.pdb
+C:\Users\Lenovo\source\repos\ConsoleApp2\SerializerConsole\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.genruntimeconfig.cache
