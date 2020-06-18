@@ -10,7 +10,7 @@ namespace ConsoleApp2
 {
     class Program
     {
-       
+
 
         static void Main(string[] args)
         {
@@ -39,30 +39,32 @@ namespace ConsoleApp2
                 var fieldType = myField.FieldType.Name;
 
                 info.Add(fieldName);
+                info.Add(fieldType);
 
                 if (fieldType.Equals("String[]"))
                 {
 
                     String[] array = (string[])(myField.GetValue(obj) as Array);
-                    
 
 
 
-                  for(int j=0; j< array.Length; j++)
+
+                    for (int j = 0; j < array.Length; j++)
                     {
 
                         array[j] = "\"" + array[j] + "\"";
 
-                        if (j == 0) {
+                        if (j == 0)
+                        {
 
                             array[j] = "[" + array[j];
-                                
-                          
+
+
                         }
 
-                        else if ( j== array.Length - 1)
+                        else if (j == array.Length - 1)
                         {
-                            array[j] = array[array.Length - 1] +  "]";
+                            array[j] = array[array.Length - 1] + "]";
                         }
 
                     }
@@ -82,33 +84,65 @@ namespace ConsoleApp2
 
             var json = "{";
 
-            for (int i = 0; i < info.Count; i = i + 2)
+            for (int A = 0; A < info.Count; A = A + 3)
             {
-                if (i == info.Count - 2)
+                if (A == info.Count - 3)
                 {
-                    json += "\"" + info[i] + "\":" + info[i + 1] + "\"";
+
+
+                        if (info[A + 1].Equals("Int32"))
+                        {
+                            json += "\"" + info[A] + "\":" + info[A + 2];
+
+                        }
+                        else if (info[A + 1].Equals("String"))
+                        {
+                            json += "\"" + info[A] + "\":\"" + info[A + 2] + "\"";
+
+                        }
+                        else if (info[A + 1].Equals("String[]"))
+                        {
+                            json += "\"" + info[A] + "\":" + info[A + 2];
+
+                        }
+
                 }
 
                 else
                 {
-                    json += "\"" + info[i] + "\":" + info[i + 1] + "\",";
+                        if (info[A + 1].Equals("Int32"))
+                        {
+                            json += "\"" + info[A] + "\":" + info[A + 2];
+
+                        }
+                        else if (info[A + 1].Equals("String"))
+                        {
+                            json += "\"" + info[A] + "\":\"" + info[A + 2] + "\"";
+
+                        }
+                        else if (info[A + 1].Equals("String[]"))
+                        {
+                            json += "\"" + info[A] + "\":" + info[A + 2];
+
+
+
+                        }
+                        json +=  ",";
+
+
+
+                    }
+
+
                 }
+            
+
+                json += "}";
+
+
+                Console.WriteLine(json);
                
 
             }
-            json += "}";
-
-            Console.WriteLine(json);
-            for (int i = 0; i < info.Count; i++)
-            {
-                Console.WriteLine(info[i]);
-                
-            }
-
-
-        
         }
-    
     }
-}
-    
