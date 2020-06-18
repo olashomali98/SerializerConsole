@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Windows.Markup;
 
 namespace ConsoleApp2
@@ -19,6 +20,27 @@ namespace ConsoleApp2
             Console.ReadLine();
         }
 
+
+
+        static string ConvertStringArrayToString(string[] array)
+        {
+            // Concatenate all the elements into a StringBuilder.
+            StringBuilder builder = new StringBuilder();
+            foreach (string value in array)
+            {
+                builder.Append(value);
+                builder.Append('.');
+            }
+            return builder.ToString();
+        }
+
+        static string ConvertStringArrayToStringJoin(string[] array)
+        {
+            // Use string Join to concatenate the string elements.
+            string result = string.Join(".", array);
+            return result;
+        }
+
         private static void Call(object obj)
         {
             List<string> info = new List<string>();
@@ -30,13 +52,26 @@ namespace ConsoleApp2
             Console.WriteLine("Fields are: ");
             foreach (FieldInfo myField in fields)
             {
-              
-
-                var values =myField.GetValue(obj).ToString();
                
 
+                Type[] types = { typeof(String), typeof(int[]),
+                       typeof(Array),
+               
+                       };
+                foreach (var t in types)
+                {
+                    if (t.IsArray )
+                    {
+                        string result1 = ConvertStringArrayToString();
+                        string result2 = ConvertStringArrayToStringJoin();
+                    }
+                    else
+                    {
+                        var values = myField.GetValue(obj).ToString();
 
-                info.Add(values);
+                        info.Add(values);
+                    }
+                }
 
                 info.Add(myField.Name);
                 info.Add(myField.FieldType.Name);
@@ -48,7 +83,11 @@ namespace ConsoleApp2
                 
             }
 
-         //hey
+        
         }
+
+      
+
+    
     }
 }
