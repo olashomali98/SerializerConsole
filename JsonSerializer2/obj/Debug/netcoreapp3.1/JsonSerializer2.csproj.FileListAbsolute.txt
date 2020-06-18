@@ -1,0 +1,9 @@
+C:\Users\Lenovo\source\repos\ClassLibrary1\JsonSerializer2\bin\Debug\netcoreapp3.1\JsonSerializer2.deps.json
+C:\Users\Lenovo\source\repos\ClassLibrary1\JsonSerializer2\bin\Debug\netcoreapp3.1\JsonSerializer2.dll
+C:\Users\Lenovo\source\repos\ClassLibrary1\JsonSerializer2\bin\Debug\netcoreapp3.1\JsonSerializer2.pdb
+C:\Users\Lenovo\source\repos\ClassLibrary1\JsonSerializer2\obj\Debug\netcoreapp3.1\JsonSerializer2.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\ClassLibrary1\JsonSerializer2\obj\Debug\netcoreapp3.1\JsonSerializer2.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\ClassLibrary1\JsonSerializer2\obj\Debug\netcoreapp3.1\JsonSerializer2.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\ClassLibrary1\JsonSerializer2\obj\Debug\netcoreapp3.1\JsonSerializer2.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\ClassLibrary1\JsonSerializer2\obj\Debug\netcoreapp3.1\JsonSerializer2.dll
+C:\Users\Lenovo\source\repos\ClassLibrary1\JsonSerializer2\obj\Debug\netcoreapp3.1\JsonSerializer2.pdb
